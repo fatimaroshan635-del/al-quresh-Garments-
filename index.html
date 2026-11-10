@@ -3,209 +3,571 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#10100e">
-<meta name="description" content="Discover premium kids fashion at AL QURESH KIDS. Explore stylish clothing for boys, girls and babies.">
-<title>AL QURESH KIDS | Premium Kids Fashion</title>
+<meta name="theme-color" content="#11110f">
+<meta name="description" content="Explore premium garment print designs, baba suits and baby suits at AL QURESH GARMENTS.">
+<title>AL QURESH GARMENTS | Premium Garments</title>
+
 <style>
-:root{--black:#10100e;--gold:#c9a45c;--cream:#f6f1e8;--white:#fff;--muted:#a9a397}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:var(--cream);color:var(--black)}
+:root{
+ --dark:#11110f;
+ --gold:#c7a45e;
+ --cream:#f6f1e8;
+ --white:#fff;
+ --muted:#aaa397;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ font-family:Arial,sans-serif;
+ background:var(--cream);
+ color:var(--dark);
+}
 a{text-decoration:none;color:inherit}
-button{cursor:pointer;font:inherit}
-header{background:var(--black);color:white;position:sticky;top:0;z-index:10;border-bottom:1px solid #393326}
-.top{padding:17px 6%;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-family:Georgia,serif;color:var(--gold);font-size:25px;letter-spacing:3px;font-weight:bold}
-.logo small{display:block;text-align:center;color:white;font-family:Arial;font-size:9px;letter-spacing:5px;margin-top:5px}
-nav{display:flex;gap:25px;align-items:center}
-nav a{font-size:12px;color:#eee}
+button,input{font:inherit}
+header{
+ background:var(--dark);
+ color:white;
+ position:sticky;
+ top:0;
+ z-index:100;
+ border-bottom:1px solid #403727;
+}
+.header{
+ max-width:1250px;
+ margin:auto;
+ padding:17px 5%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:20px;
+}
+.logo{
+ color:var(--gold);
+ font-family:Georgia,serif;
+ font-size:24px;
+ letter-spacing:2px;
+ font-weight:bold;
+ white-space:nowrap;
+}
+.logo span{
+ display:block;
+ color:white;
+ font:9px Arial;
+ letter-spacing:5px;
+ text-align:center;
+ margin-top:5px;
+}
+nav{display:flex;align-items:center;gap:25px}
+nav a{
+ font-size:11px;
+ letter-spacing:1px;
+ color:#eee;
+}
 nav a:hover{color:var(--gold)}
-.navbtn{border:1px solid var(--gold);background:none;color:var(--gold);padding:10px 16px}
-.menu{display:none;background:none;border:0;color:var(--gold);font-size:25px}
-.hero{background:linear-gradient(90deg,rgba(10,10,9,.95),rgba(10,10,9,.48)),url('https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1800&q=85') center/cover;min-height:520px;display:flex;align-items:center;padding:70px 8%;color:white}
-.hero-content{max-width:520px}
-.eyebrow{color:var(--gold);letter-spacing:4px;font-size:11px;margin-bottom:22px}
-.hero h1{font-family:Georgia,serif;font-size:clamp(42px,7vw,75px);line-height:1.08;font-weight:normal;margin-bottom:20px}
+.menu{
+ display:none;
+ background:none;
+ border:1px solid var(--gold);
+ color:var(--gold);
+ padding:8px 12px;
+}
+.hero{
+ min-height:570px;
+ background:
+ linear-gradient(90deg,rgba(12,12,10,.94),rgba(12,12,10,.35)),
+ url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=85') center/cover;
+ display:flex;
+ align-items:center;
+ padding:70px 9%;
+ color:white;
+}
+.hero-content{max-width:620px}
+.eyebrow{
+ color:var(--gold);
+ letter-spacing:4px;
+ font-size:11px;
+ margin-bottom:23px;
+}
+.hero h1{
+ font:normal clamp(43px,7vw,78px)/1.1 Georgia,serif;
+ margin-bottom:22px;
+}
 .hero h1 span{color:var(--gold)}
-.hero p{color:#ddd;line-height:1.8;font-size:14px;max-width:420px}
-.gold-btn{display:inline-block;margin-top:28px;background:var(--gold);color:#15130f;padding:15px 25px;font-weight:bold;font-size:11px;letter-spacing:2px;border:0}
-.section{padding:75px 7%}
-.heading{text-align:center;margin-bottom:38px}
-.heading small{color:#98753d;letter-spacing:3px;font-size:10px}
-.heading h2{font:normal 38px Georgia,serif;margin-top:10px}
-.heading p{color:#777;margin-top:10px;font-size:13px}
-.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.category{position:relative;height:350px;overflow:hidden;background:#ddd}
-.category img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.hero p{
+ max-width:470px;
+ color:#e0ddd6;
+ line-height:1.9;
+ font-size:14px;
+}
+.gold-btn{
+ display:inline-block;
+ background:var(--gold);
+ color:#111;
+ padding:16px 26px;
+ margin-top:28px;
+ border:0;
+ font-weight:bold;
+ font-size:11px;
+ letter-spacing:2px;
+ cursor:pointer;
+}
+.section{
+ padding:78px 7%;
+ max-width:1450px;
+ margin:auto;
+}
+.heading{text-align:center;margin-bottom:42px}
+.heading small{
+ color:#94733b;
+ letter-spacing:3px;
+ font-size:10px;
+}
+.heading h2{
+ font:normal 39px Georgia,serif;
+ margin-top:12px;
+}
+.heading p{
+ color:#777;
+ font-size:13px;
+ margin-top:12px;
+ line-height:1.8;
+}
+.search-wrap{
+ max-width:650px;
+ margin:0 auto 35px;
+ display:flex;
+ background:white;
+ border:1px solid #ded5c5;
+ padding:7px;
+}
+.search-wrap input{
+ flex:1;
+ min-width:0;
+ border:0;
+ outline:none;
+ padding:13px;
+ font-size:13px;
+ background:transparent;
+}
+.search-wrap button{
+ border:0;
+ background:var(--dark);
+ color:var(--gold);
+ padding:0 20px;
+ font-size:11px;
+ letter-spacing:1px;
+}
+.categories{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:22px;
+}
+.category{
+ position:relative;
+ height:390px;
+ overflow:hidden;
+ background:#ddd5c8;
+}
+.category img{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ transition:.6s;
+}
 .category:hover img{transform:scale(1.06)}
-.category-info{position:absolute;bottom:0;left:0;right:0;padding:30px 20px;background:linear-gradient(transparent,rgba(0,0,0,.8));color:white}
-.category-info h3{font:normal 29px Georgia,serif}
-.category-info p{font-size:11px;color:#ddd;margin-top:7px}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.product{background:white;position:relative}
-.product img{width:100%;height:260px;object-fit:cover;background:#e9e5dd}
-.product-info{padding:16px}
-.product-info h3{font:normal 17px Georgia,serif}
-.product-info p{color:#777;font-size:11px;margin:8px 0}
-.price{font-weight:bold;font-size:14px}
-.old{color:#999;text-decoration:line-through;font-size:11px;margin-left:7px}
-.tag{position:absolute;top:12px;left:12px;background:var(--gold);padding:7px 10px;font-size:9px;letter-spacing:1px}
-.add{width:100%;margin-top:14px;padding:11px;background:var(--black);color:var(--gold);border:0;font-size:10px;letter-spacing:1px}
-.add:hover{background:var(--gold);color:var(--black)}
-.banner{background:var(--black);color:white;padding:65px 8%;text-align:center}
-.banner h2{font:normal 38px Georgia,serif}
-.banner p{color:#ccc;font-size:13px;margin-top:12px}
-.banner .gold-btn{margin-top:22px}
-.about{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
-.about img{width:100%;height:350px;object-fit:cover}
-.about h2{font:normal 38px Georgia,serif;margin:15px 0}
-.about p{font-size:13px;line-height:2;color:#666}
-footer{background:#10100e;color:white;padding:55px 7% 25px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}
-footer h3{font:normal 23px Georgia,serif;color:var(--gold);margin-bottom:15px}
-footer p,footer a{font-size:12px;line-height:2;color:#bbb;display:block}
-.copyright{border-top:1px solid #38352e;margin-top:35px;padding-top:20px;text-align:center;color:#888;font-size:10px}
-.cart{position:fixed;bottom:20px;right:20px;background:var(--gold);color:#111;border:0;border-radius:50px;padding:15px 20px;z-index:20;font-weight:bold;box-shadow:0 5px 20px #0003}
-@media(max-width:800px){
- nav{display:none;position:absolute;top:65px;left:0;right:0;background:var(--black);padding:25px;flex-direction:column;align-items:flex-start}
+.category:after{
+ content:"";
+ position:absolute;
+ inset:35% 0 0;
+ background:linear-gradient(transparent,rgba(0,0,0,.85));
+}
+.category-info{
+ position:absolute;
+ bottom:27px;
+ left:25px;
+ right:15px;
+ color:white;
+ z-index:2;
+}
+.category-info small{
+ color:var(--gold);
+ letter-spacing:2px;
+ font-size:9px;
+}
+.category-info h3{
+ font:normal 29px Georgia,serif;
+ margin:10px 0;
+}
+.category-info span{
+ font-size:10px;
+ letter-spacing:2px;
+ color:#eee;
+}
+.collection{
+ background:#eee8dd;
+ max-width:none;
+}
+.collection-inner{
+ max-width:1250px;
+ margin:auto;
+}
+.product-search-info{
+ text-align:center;
+ font-size:12px;
+ color:#777;
+ margin:20px 0;
+}
+.empty-products{
+ background:white;
+ border:1px solid #e4dccf;
+ text-align:center;
+ padding:48px 20px;
+ max-width:700px;
+ margin:auto;
+}
+.empty-products .symbol{
+ font-size:36px;
+ color:var(--gold);
+}
+.empty-products h3{
+ font:normal 25px Georgia,serif;
+ margin:15px 0 10px;
+}
+.empty-products p{
+ color:#777;
+ font-size:12px;
+ line-height:1.8;
+}
+.empty-products a{
+ display:inline-block;
+ margin-top:20px;
+ color:#8b6a33;
+ font-size:11px;
+ letter-spacing:1px;
+ border-bottom:1px solid var(--gold);
+ padding-bottom:5px;
+}
+.feature-banner{
+ background:var(--dark);
+ color:white;
+ text-align:center;
+ padding:80px 7%;
+}
+.feature-banner small{
+ color:var(--gold);
+ letter-spacing:4px;
+ font-size:10px;
+}
+.feature-banner h2{
+ font:normal 40px Georgia,serif;
+ margin:20px 0 12px;
+}
+.feature-banner p{
+ color:#ccc;
+ font-size:13px;
+ line-height:1.8;
+}
+.about{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ align-items:center;
+ gap:55px;
+}
+.about img{
+ width:100%;
+ height:390px;
+ object-fit:cover;
+}
+.about h2{
+ font:normal 40px Georgia,serif;
+ margin:17px 0;
+}
+.about p{
+ color:#6d6a64;
+ font-size:13px;
+ line-height:2;
+}
+footer{
+ background:var(--dark);
+ color:white;
+ padding:60px 7% 25px;
+}
+.footer-inner{
+ max-width:1200px;
+ margin:auto;
+}
+.footer-grid{
+ display:grid;
+ grid-template-columns:2fr 1fr 1fr;
+ gap:40px;
+}
+footer h3{
+ color:var(--gold);
+ font:normal 23px Georgia,serif;
+ margin-bottom:18px;
+}
+footer p,footer a{
+ display:block;
+ color:#bbb;
+ font-size:12px;
+ line-height:2.2;
+}
+footer a:hover{color:var(--gold)}
+.copyright{
+ text-align:center;
+ color:#888;
+ font-size:10px;
+ border-top:1px solid #39352d;
+ margin-top:40px;
+ padding-top:22px;
+}
+.hidden{display:none!important}
+@media(max-width:850px){
+ nav{
+  display:none;
+  position:absolute;
+  top:68px;
+  left:0;
+  right:0;
+  background:var(--dark);
+  padding:25px 7%;
+  flex-direction:column;
+  align-items:flex-start;
+ }
  nav.open{display:flex}
  .menu{display:block}
  .categories{grid-template-columns:1fr 1fr}
- .products{grid-template-columns:1fr 1fr}
- .category{height:270px}
- .product img{height:210px}
+ .category{height:320px}
  .about{grid-template-columns:1fr}
- .footer-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:440px){
- .categories{grid-template-columns:1fr}
- .category{height:350px}
- .footer-grid{grid-template-columns:1fr}
+@media(max-width:520px){
+ .header{padding:15px 4%}
+ .logo{font-size:20px}
+ .hero{min-height:490px;padding:50px 7%}
  .section{padding:55px 5%}
- .hero{min-height:480px;padding:45px 7%}
+ .categories{grid-template-columns:1fr}
+ .category{height:370px}
+ .heading h2{font-size:32px}
+ .footer-grid{grid-template-columns:1fr}
+ .feature-banner h2{font-size:32px}
 }
 </style>
 </head>
+
 <body>
+
 <header>
- <div class="top">
-  <a class="logo" href="#">AL QURESH<small>KIDS</small></a>
-  <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
-  <nav>
-   <a href="#home">HOME</a>
-   <a href="#collections">COLLECTIONS</a>
-   <a href="#products">NEW ARRIVALS</a>
-   <a href="#about">ABOUT US</a>
-   <a href="#contact">CONTACT</a>
-   <button class="navbtn" onclick="showCart()">BAG (<span id="count">0</span>)</button>
+ <div class="header">
+  <a href="#home" class="logo">
+   AL QURESH
+   <span>GARMENTS</span>
+  </a>
+
+  <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+
+  <nav id="navigation">
+   <a href="#home" onclick="closeMenu()">HOME</a>
+   <a href="#collections" onclick="closeMenu()">COLLECTIONS</a>
+   <a href="#print-designs" onclick="closeMenu()">PRINT DESIGNS</a>
+   <a href="#baba-suits" onclick="closeMenu()">BABA SUITS</a>
+   <a href="#baby-suits" onclick="closeMenu()">BABY SUITS</a>
+   <a href="#about" onclick="closeMenu()">ABOUT</a>
   </nav>
  </div>
 </header>
 
 <main>
+
 <section class="hero" id="home">
  <div class="hero-content">
-  <div class="eyebrow">THE WORLD OF LITTLE FASHION</div>
-  <h1>Little Styles.<br><span>Big Dreams.</span></h1>
-  <p>Discover beautiful styles and timeless comfort for your little ones. Welcome to the world of AL QURESH KIDS.</p>
-  <a class="gold-btn" href="#collections">EXPLORE COLLECTION</a>
+  <div class="eyebrow">THE ART OF PREMIUM FASHION</div>
+  <h1>Style That<br><span>Defines You.</span></h1>
+  <p>
+   Welcome to AL QURESH GARMENTS.
+   Discover beautiful print designs, elegant baba suits
+   and comfortable baby suits in one place.
+  </p>
+  <a href="#collections" class="gold-btn">EXPLORE COLLECTIONS</a>
  </div>
 </section>
 
 <section class="section" id="collections">
  <div class="heading">
-  <small>DISCOVER OUR WORLD</small>
+  <small>EXPLORE OUR CATEGORIES</small>
   <h2>Our Collections</h2>
-  <p>Thoughtfully selected styles for every little personality.</p>
+  <p>Discover our latest garment designs and collections.</p>
  </div>
+
+ <div class="search-wrap">
+  <input id="categorySearch" type="search"
+   placeholder="Search print designs, baba suits, baby suits..."
+   aria-label="Search collections">
+  <button onclick="searchCategory()">SEARCH</button>
+ </div>
+
  <div class="categories">
-  <a class="category" href="#products">
-   <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80" alt="Kids fashion">
-   <div class="category-info"><h3>Boys Collection</h3><p>SMART STYLES FOR LITTLE GENTLEMEN</p></div>
+  <a class="category" href="#print-designs" data-search="print prints fabric designs">
+   <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=750&q=85" alt="Garment print designs">
+   <div class="category-info">
+    <small>FABRIC & PATTERNS</small>
+    <h3>Print Designs</h3>
+    <span>EXPLORE DESIGNS →</span>
+   </div>
   </a>
-  <a class="category" href="#products">
-   <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=700&q=80" alt="Children clothing">
-   <div class="category-info"><h3>Girls Collection</h3><p>BEAUTIFUL STYLES FOR LITTLE STARS</p></div>
+
+  <a class="category" href="#baba-suits" data-search="baba suit boys suits">
+   <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=750&q=85" alt="Children fashion">
+   <div class="category-info">
+    <small>PREMIUM COLLECTION</small>
+    <h3>Baba Suit Designs</h3>
+    <span>EXPLORE DESIGNS →</span>
+   </div>
   </a>
-  <a class="category" href="#products">
-   <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=700&q=80" alt="Baby clothing">
-   <div class="category-info"><h3>Baby Collection</h3><p>SOFT COMFORT FOR LITTLE ONES</p></div>
+
+  <a class="category" href="#baby-suits" data-search="baby suit infant suits">
+   <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=750&q=85" alt="Baby clothing">
+   <div class="category-info">
+    <small>SOFT & COMFORTABLE</small>
+    <h3>Baby Suit Designs</h3>
+    <span>EXPLORE DESIGNS →</span>
+   </div>
   </a>
+ </div>
+ <p id="searchMessage" class="product-search-info hidden"></p>
+</section>
+
+<section class="section collection" id="print-designs">
+ <div class="collection-inner">
+  <div class="heading">
+   <small>FABRIC COLLECTION</small>
+   <h2>Print Designs</h2>
+   <p>Explore our garment print patterns and fabric designs.</p>
+  </div>
+  <div class="empty-products">
+   <div class="symbol">✦</div>
+   <h3>Print Collection</h3>
+   <p>New print designs will be displayed here after they are uploaded and published by the store owner.</p>
+  </div>
  </div>
 </section>
 
-<section class="section" id="products" style="background:#eee8dd">
+<section class="section" id="baba-suits">
  <div class="heading">
-  <small>HANDPICKED FOR YOU</small>
-  <h2>Featured Collection</h2>
-  <p>Explore our selected kids fashion styles.</p>
+  <small>PREMIUM GARMENTS</small>
+  <h2>Baba Suit Designs</h2>
+  <p>Discover the latest baba suit designs and prices.</p>
  </div>
- <div class="products">
-  <article class="product">
-   <span class="tag">NEW ARRIVAL</span>
-   <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80" alt="Kids outfit">
-   <div class="product-info"><h3>Little Gentleman Outfit</h3><p>Comfortable kids style</p><span class="price">Rs. 2,500</span><button class="add" onclick="addCart('Little Gentleman Outfit',2500)">ADD TO BAG</button></div>
-  </article>
-  <article class="product">
-   <span class="tag">FEATURED</span>
-   <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=600&q=80" alt="Kids dress">
-   <div class="product-info"><h3>Princess Style Dress</h3><p>Elegant little fashion</p><span class="price">Rs. 2,800</span><button class="add" onclick="addCart('Princess Style Dress',2800)">ADD TO BAG</button></div>
-  </article>
-  <article class="product">
-   <span class="tag">POPULAR</span>
-   <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=600&q=80" alt="Baby clothing">
-   <div class="product-info"><h3>Baby Comfort Suit</h3><p>Soft everyday comfort</p><span class="price">Rs. 1,900</span><button class="add" onclick="addCart('Baby Comfort Suit',1900)">ADD TO BAG</button></div>
-  </article>
-  <article class="product">
-   <span class="tag">NEW</span>
-   <img src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=600&q=80" alt="Children outfit">
-   <div class="product-info"><h3>Everyday Little Style</h3><p>Made for happy moments</p><span class="price">Rs. 2,200</span><button class="add" onclick="addCart('Everyday Little Style',2200)">ADD TO BAG</button></div>
-  </article>
+ <div class="empty-products">
+  <div class="symbol">✦</div>
+  <h3>Baba Suit Collection</h3>
+  <p>New baba suit pictures, product names and prices will appear here when published by the owner.</p>
  </div>
 </section>
 
-<section class="banner">
- <small style="color:#c9a45c;letter-spacing:3px">SPECIAL MOMENTS, SPECIAL STYLES</small>
- <h2>Made for Little Memories</h2>
- <p>Discover the perfect look for every beautiful childhood moment.</p>
- <a href="#collections" class="gold-btn">SHOP COLLECTION</a>
+<section class="section collection" id="baby-suits">
+ <div class="collection-inner">
+  <div class="heading">
+   <small>LITTLE FASHION</small>
+   <h2>Baby Suit Designs</h2>
+   <p>Beautiful and comfortable baby suit designs.</p>
+  </div>
+  <div class="empty-products">
+   <div class="symbol">✦</div>
+   <h3>Baby Suit Collection</h3>
+   <p>New baby suit pictures, product names and prices will appear here when published by the owner.</p>
+  </div>
+ </div>
+</section>
+
+<section class="feature-banner">
+ <small>AL QURESH GARMENTS</small>
+ <h2>Quality Meets Style</h2>
+ <p>Beautiful designs. Thoughtful details. A collection made to stand out.</p>
+ <a href="#collections" class="gold-btn">DISCOVER MORE</a>
 </section>
 
 <section class="section about" id="about">
- <img src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=85" alt="Kids fashion">
+ <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=85" alt="Premium garments collection">
  <div>
-  <small style="letter-spacing:3px;color:#98753d">OUR BRAND STORY</small>
-  <h2>Welcome to<br>AL QURESH KIDS</h2>
-  <p>We believe every child deserves to feel special. AL QURESH KIDS brings together style, comfort and beautiful fashion for little ones. Explore our collections and discover something special for your family.</p>
-  <a href="#collections" class="gold-btn">DISCOVER MORE</a>
+  <small style="color:#94733b;letter-spacing:3px">ABOUT OUR BRAND</small>
+  <h2>AL QURESH GARMENTS</h2>
+  <p>
+   Welcome to AL QURESH GARMENTS, a clothing brand
+   bringing together beautiful print designs and
+   carefully selected garment collections.
+   Explore our categories and discover styles
+   that suit your choice.
+  </p>
+  <a href="#collections" class="gold-btn">EXPLORE COLLECTIONS</a>
  </div>
 </section>
+
 </main>
 
-<footer id="contact">
- <div class="footer-grid">
-  <div><h3>AL QURESH KIDS</h3><p>Little Styles. Big Dreams.</p><p>Premium kids fashion and beautiful collections for little ones.</p></div>
-  <div><h3>Explore</h3><a href="#home">Home</a><a href="#collections">Collections</a><a href="#products">New Arrivals</a><a href="#about">About Us</a></div>
-  <div><h3>Contact</h3><p>Email: </p><p>Phone: </p><p>WhatsApp: </p></div>
+<footer>
+ <div class="footer-inner">
+  <div class="footer-grid">
+   <div>
+    <h3>AL QURESH GARMENTS</h3>
+    <p>Premium Garments & Fashion.</p>
+    <p>Discover print designs, baba suits and baby suits.</p>
+   </div>
+
+   <div>
+    <h3>Collections</h3>
+    <a href="#print-designs">Print Designs</a>
+    <a href="#baba-suits">Baba Suit Designs</a>
+    <a href="#baby-suits">Baby Suit Designs</a>
+   </div>
+
+   <div>
+    <h3>Contact</h3>
+    <p>Email:</p>
+    <p>Phone:</p>
+    <p>WhatsApp:</p>
+   </div>
+  </div>
+
+  <div class="copyright">
+   © 2026 AL QURESH GARMENTS. ALL RIGHTS RESERVED.
+  </div>
  </div>
- <div class="copyright">© 2026 AL QURESH KIDS. ALL RIGHTS RESERVED.</div>
 </footer>
 
-<button class="cart" onclick="showCart()">BAG (<span id="count2">0</span>)</button>
 <script>
-let cart=[];
-function addCart(name,price){
- cart.push({name,price});
- document.getElementById('count').textContent=cart.length;
- document.getElementById('count2').textContent=cart.length;
- alert(name+' added to your shopping bag.');
+function toggleMenu(){
+ document.getElementById('navigation').classList.toggle('open');
 }
-function showCart(){
- if(!cart.length){alert('Your shopping bag is empty.');return;}
- let total=cart.reduce((sum,item)=>sum+item.price,0);
- let details=cart.map(item=>item.name+' - Rs. '+item.price).join('\n');
- alert('YOUR SHOPPING BAG\n\n'+details+'\n\nTotal: Rs. '+total+'\n\nCheckout and ordering will be connected in the next development stage.');
+function closeMenu(){
+ document.getElementById('navigation').classList.remove('open');
 }
+function searchCategory(){
+ const input=document.getElementById('categorySearch');
+ const query=input.value.trim().toLowerCase();
+ const cards=document.querySelectorAll('.category');
+ const message=document.getElementById('searchMessage');
+ let matches=0;
+
+ cards.forEach(card=>{
+  const keywords=card.dataset.search.toLowerCase();
+  const title=card.querySelector('h3').textContent.toLowerCase();
+  const found=!query || keywords.includes(query) || title.includes(query);
+  card.classList.toggle('hidden',!found);
+  if(found) matches++;
+ });
+
+ message.classList.remove('hidden');
+ message.textContent=query
+  ? (matches ? matches+' matching collection(s) found.' : 'No matching collection found. Try another search.')
+  : 'Showing all collections.';
+
+ document.getElementById('collections').scrollIntoView({behavior:'smooth'});
+}
+document.getElementById('categorySearch').addEventListener('keydown',e=>{
+ if(e.key==='Enter') searchCategory();
+});
 </script>
+
 </body>
-                                                                                                                                                                                                          </html>
-                                                                                                                                                                                                          
+    </html>
+    
