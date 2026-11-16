@@ -1,157 +1,351 @@
-•AL-QURESH GARMENTS — COMPLETE BRANDING & E-COMMERCE UPGRADE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05080e">
+<title>.Al Quresh Garments | Wear Elegance, Live Style</title>
+<meta name="description" content=".Al Quresh Garments - Discover premium Baba suits, Baby suits and print designs. Quality fashion with style.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-Upgrade the existing GitHub website without deleting or damaging existing working features.
+<style>
+:root{--gold:#f5bd35;--gold2:#ffdf75;--black:#05080e;--panel:#0d1420;--white:#fff;--muted:#aeb6c2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:#fff;font-family:Poppins,Arial,sans-serif}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.gold{color:var(--gold)}
+.topbar{background:#02050a;border-bottom:1px solid #6f531d;padding:9px 4%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:#f6e4b5}
+.topbar span{margin-right:15px}
+.header{padding:18px 4%;display:flex;align-items:center;gap:25px;justify-content:space-between;background:linear-gradient(110deg,#080d15,#111722,#05080e);border-bottom:1px solid #775b20}
+.brand{display:flex;align-items:center;gap:12px;min-width:260px}
+.brand-mark{font-size:54px;color:var(--gold);line-height:1;text-shadow:0 0 18px #c28b1e}
+.brand-name{font-family:"Playfair Display",serif;font-size:clamp(25px,3.6vw,48px);font-weight:800;line-height:1.05;white-space:nowrap}
+.brand-name .dot{color:#ffbf00;font-size:1.25em;margin-right:2px;text-shadow:0 0 15px #f8bd36}
+.brand-name .garments{color:var(--gold)}
+.tagline{font-family:"Playfair Display",serif;color:var(--gold2);font-style:italic;text-align:center;font-size:17px;margin-top:5px}
+.search{display:flex;flex:1;max-width:560px;background:#fff;border-radius:50px;overflow:hidden;border:2px solid var(--gold)}
+.search input{border:0;padding:14px 18px;outline:none;min-width:0;flex:1;color:#222}
+.search button{border:0;background:var(--gold);padding:0 22px;font-size:20px}
+.header-actions{display:flex;gap:10px;align-items:center}
+.gold-btn{background:linear-gradient(135deg,#ffe18a,#e9a916);color:#090b10;border:1px solid #ffdc76;border-radius:9px;padding:12px 17px;font-weight:800;box-shadow:0 3px 15px #d69b2433}
+.dark-btn{background:#111a27;border:1px solid #b78b2b;color:#ffdc82;border-radius:9px;padding:11px 14px;font-weight:700}
+.nav{display:flex;align-items:center;justify-content:center;gap:0;background:#0b1018;border-bottom:3px solid var(--gold);position:sticky;top:0;z-index:20;box-shadow:0 5px 20px #0008}
+.nav a,.nav button{padding:15px 22px;color:#f5f0e4;font-weight:600;background:none;border:0}
+.nav a:hover,.nav button:hover{background:linear-gradient(135deg,#ffe18a,#e9a916);color:#090b10}
+.hero{min-height:440px;display:grid;grid-template-columns:42% 58%;align-items:center;overflow:hidden;position:relative;background:linear-gradient(90deg,#08090c 0%,#08090c 48%,#17100a 100%);border-bottom:2px solid var(--gold)}
+.hero-photo{height:100%;min-height:440px;background:linear-gradient(90deg,transparent 75%,#08090c),url("https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1100&q=90") center/cover}
+.hero-content{text-align:center;padding:35px 5%;position:relative}
+.hero-hanger{font-size:60px;color:var(--gold);line-height:1}
+.hero-title{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,72px);font-weight:800;line-height:1.05;margin:10px 0}
+.hero-title .dot{color:#ffbd00;font-size:1.22em}
+.hero-title .gold{color:var(--gold)}
+.hero-tag{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(20px,2.4vw,32px);color:var(--gold2);margin:12px 0}
+.hero-copy{color:#eee;font-size:16px;margin:18px 0 25px}
+.hero-offer{display:inline-block;border:2px solid var(--gold);border-radius:50%;padding:20px 25px;margin:12px;color:var(--gold);font-weight:800;font-size:25px;box-shadow:0 0 24px #dba32955}
+.hero-offer small{display:block;color:white;font-size:13px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);background:#07111e;border-bottom:1px solid #71551d;padding:18px 4%;gap:10px}
+.service{text-align:center;border-right:1px solid #96732b;color:#f8e7bd;font-weight:600}
+.service:last-child{border:0}
+.service b{display:block;color:var(--gold);font-size:24px}
+.section{padding:48px 4%}
+.section-heading{text-align:center;font-family:"Playfair Display",serif;font-size:clamp(27px,3vw,40px);margin:0 0 28px}
+.section-heading:after{content:"";display:block;width:120px;height:3px;background:var(--gold);margin:12px auto}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.category{height:260px;position:relative;border:3px solid var(--gold);border-radius:17px;overflow:hidden;cursor:pointer;background:#151515;box-shadow:0 5px 25px #0008}
+.category img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.category:hover img{transform:scale(1.07)}
+.category-label{position:absolute;bottom:0;left:0;right:0;background:#050505eF;padding:16px;text-align:center;font-size:20px;font-weight:800}
+.category-label span{color:var(--gold)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{background:linear-gradient(145deg,#151e2b,#080c13);border:1px solid #8e6b25;border-radius:13px;overflow:hidden;box-shadow:0 8px 25px #0007}
+.product img{width:100%;height:230px;object-fit:cover;background:#171717}
+.product-info{padding:14px}
+.product-info h3{margin:0 0 8px;font-size:16px}
+.price{color:var(--gold);font-weight:800;font-size:18px}
+.old-price{text-decoration:line-through;color:#9299a3;font-size:13px;margin-left:8px}
+.product-info p{color:var(--muted);font-size:12px;min-height:32px}
+.product-info button{width:100%;margin-top:8px}
+.empty{text-align:center;padding:35px;color:#c2c6cd;border:1px dashed #806324;border-radius:12px;grid-column:1/-1}
+.about{background:linear-gradient(120deg,#101824,#080b11);border-top:1px solid #76591d;border-bottom:1px solid #76591d;text-align:center}
+.about p{max-width:760px;margin:0 auto;color:#cbd0d7;line-height:1.9}
+.footer{padding:35px 4%;background:#02050a;text-align:center;color:#bbc2cb}
+.footer-brand{font-family:"Playfair Display",serif;font-size:30px;font-weight:800;margin-bottom:10px}
+.footer a{color:var(--gold2);margin:7px}
+.footer small{display:block;margin-top:20px;color:#737e8d}
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:100;align-items:center;justify-content:center;padding:15px}
+.modal.open{display:flex}
+.modal-box{background:#101824;border:1px solid var(--gold);border-radius:16px;padding:25px;width:min(520px,100%);max-height:90vh;overflow:auto}
+.modal-box h2{font-family:"Playfair Display",serif;color:var(--gold);margin-top:0}
+.modal-box input,.modal-box textarea,.modal-box select{width:100%;padding:12px;margin:7px 0 13px;border-radius:7px;border:1px solid #675124;background:#080d15;color:#fff}
+.modal-box label{font-size:13px;color:#e7d8b4}
+.modal-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.cart-row{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #35404d}
+.admin-area{display:none;background:#0c1420;border:1px solid var(--gold);border-radius:14px;padding:22px;margin:25px 4%}
+.admin-area.show{display:block}
+.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.admin-products{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.admin-item{padding:12px;border:1px solid #51421f;border-radius:9px;background:#111b29}
+.admin-item button{margin:4px 2px}
+.notice{color:#ffdc82;font-size:13px;margin:10px 0}
+.hidden{display:none!important}
+@media(max-width:900px){
+ .header{flex-wrap:wrap}.brand{flex:1}.search{order:3;max-width:none;flex-basis:100%}
+ .nav{overflow-x:auto;justify-content:flex-start}.nav a,.nav button{white-space:nowrap;padding:13px 15px}
+ .hero{grid-template-columns:1fr}.hero-photo{min-height:260px;background-position:center 35%}
+ .hero-content{padding:25px 4%}.products{grid-template-columns:repeat(2,1fr)}
+ .services{grid-template-columns:repeat(2,1fr);row-gap:18px}.service:nth-child(2){border:0}
+}
+@media(max-width:560px){
+ .topbar{font-size:10px}.brand{min-width:0}.brand-mark{font-size:38px}
+ .brand-name{font-size:25px}.tagline{font-size:13px}
+ .header-actions{width:100%;justify-content:center}
+ .categories{grid-template-columns:1fr}.category{height:230px}
+ .products{gap:10px}.product img{height:165px}.product-info{padding:10px}
+ .product-info h3{font-size:14px}.price{font-size:16px}
+ .section{padding:35px 4%}.admin-grid,.admin-products{grid-template-columns:1fr}
+}
+</style>
+</head>
 
-Official Brand Name: Al-Quresh Garments
+<body>
+<div class="topbar">
+ <div><span>🚚 Free Delivery Across Pakistan</span><span>★ Premium Quality</span><span>◆ Trusted Style</span></div>
+ <div><a href="#" onclick="openModal('authModal')">👤 Login / Register</a> &nbsp; | &nbsp; <a href="#" onclick="openCart()">🛒 Cart (<b id="cartCount">0</b>)</a></div>
+</div>
 
-Brand Category: Baby & Baba Kids Wear
+<header class="header">
+ <a class="brand" href="#">
+  <div class="brand-mark">♛</div>
+  <div>
+   <div class="brand-name"><span class="dot">.</span>Al Quresh <span class="garments">Garments</span></div>
+   <div class="tagline">Wear Elegance, Live Style</div>
+  </div>
+ </a>
+ <div class="search">
+  <input id="searchInput" placeholder="Search for products..." oninput="renderProducts()">
+  <button onclick="renderProducts()">⌕</button>
+ </div>
+ <div class="header-actions">
+  <button class="dark-btn" onclick="openModal('adminLoginModal')">♛ Admin Panel</button>
+ </div>
+</header>
 
-1. Exact Brand Identity
+<nav class="nav">
+ <a href="#">⌂ Home</a>
+ <a href="#products" onclick="chooseCategory('Baba Suit Designs')">Baba Suits</a>
+ <a href="#products" onclick="chooseCategory('Baby Suit Designs')">Baby Suits</a>
+ <a href="#products" onclick="chooseCategory('Print Designs')">Print Designs</a>
+ <a href="#categories">Categories</a>
+ <a href="#about">About Us</a>
+ <a href="#contact">Contact</a>
+</nav>
 
-Use the attached original visiting card as the primary branding reference.
+<section class="hero">
+ <div class="hero-photo" role="img" aria-label="Premium fashion collection"></div>
+ <div class="hero-content">
+  <div class="hero-hanger">♛</div>
+  <h1 class="hero-title"><span class="dot">.</span>Al Quresh<br><span class="gold">Garments</span></h1>
+  <div class="hero-tag">Wear Elegance, Live Style</div>
+  <div class="hero-copy">Premium Fashion • Beautiful Designs • Quality You Can Trust</div>
+  <div class="hero-offer"><small>DISCOVER OUR COLLECTION</small>NEW STYLE</div>
+  <br><a class="gold-btn" href="#products">🛒 Explore Collection →</a>
+ </div>
+</section>
 
-Recreate the brand identity as closely as possible:
+<div class="services">
+ <div class="service"><b>🚚</b>Delivery Across Pakistan</div>
+ <div class="service"><b>✦</b>Premium Designs</div>
+ <div class="service"><b>✓</b>Quality You Can Trust</div>
+ <div class="service"><b>☎</b>Customer Support</div>
+</div>
 
-- Black premium rectangular garment hang-tag appearance.
-- Small circular hanging hole at the top.
-- Elegant gold AQ monogram with a crown above it.
-- Gold script typography reading "Al-Quresh".
-- Gold "Garments" lettering underneath.
-- White rectangular label reading "Baby & Baba".
-- White/gold "Kids Wear".
-- Exact tagline: "A Name You Can Trust".
+<section class="section" id="categories">
+ <h2 class="section-heading">Shop by <span class="gold">Category</span></h2>
+ <div class="categories">
+  <div class="category" onclick="chooseCategory('Baba Suit Designs')">
+   <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=800&q=85" alt="Baba suit designs">
+   <div class="category-label">Baba Suit <span>Designs →</span></div>
+  </div>
+  <div class="category" onclick="chooseCategory('Baby Suit Designs')">
+   <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=85" alt="Baby suit designs">
+   <div class="category-label">Baby Suit <span>Designs →</span></div>
+  </div>
+  <div class="category" onclick="chooseCategory('Print Designs')">
+   <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=85" alt="Print designs">
+   <div class="category-label">Print <span>Designs →</span></div>
+  </div>
+ </div>
+</section>
 
-Do not replace this identity with generic typography or a different logo.
+<section class="section" id="products">
+ <h2 class="section-heading">Our <span class="gold">Latest Collection</span></h2>
+ <div id="activeCategory" class="notice" style="text-align:center"></div>
+ <div class="products" id="productGrid">
+  <div class="empty">Loading collection...</div>
+ </div>
+</section>
 
-Use the supplied card photograph as a visual reference. Create a clean, high-resolution digital logo suitable for website header, footer, favicon, product branding and mobile screens.
+<section class="section about" id="about">
+ <h2 class="section-heading"><span class="gold">.Al Quresh Garments</span></h2>
+ <p>Welcome to .Al Quresh Garments — where style meets quality. Explore our Baba Suit Designs, Baby Suit Designs and Print Designs. Our aim is to bring you elegant designs, trusted quality and a convenient shopping experience.</p>
+</section>
 
-Official spelling must remain exactly: Al-Quresh Garments.
+<footer class="footer" id="contact">
+ <div class="footer-brand"><span class="gold">.Al Quresh Garments</span></div>
+ <div><i>Wear Elegance, Live Style</i></div>
+ <p>Customer Care & Orders</p>
+ <p><a href="tel:+923132695224">☎ 0313 2695224</a></p>
+ <p><a href="https://wa.me/923132695224" target="_blank">WhatsApp Us</a></p>
+ <p><a href="mailto:Zubairqureshi03132695224@gmail.com">Zubairqureshi03132695224@gmail.com</a></p>
+ <small>© <span id="year"></span> .Al Quresh Garments. All rights reserved.</small>
+</footer>
 
-2. Website Branding Replacement
+<section class="admin-area" id="adminArea">
+ <h2 class="gold">♛ Admin Dashboard — .Al Quresh Garments</h2>
+ <p id="adminEmail" class="notice"></p>
+ <button class="dark-btn" onclick="signOut()">Logout</button>
+ <hr style="border-color:#55421d;margin:20px 0">
+ <h3 class="gold">Add / Update Product</h3>
+ <form id="productForm">
+  <input type="hidden" id="editId">
+  <div class="admin-grid">
+   <label>Product Name<input id="pTitle" required maxlength="120"></label>
+   <label>Category<select id="pCategory" required>
+    <option value="Baba Suit Designs">Baba Suit Designs</option>
+    <option value="Baby Suit Designs">Baby Suit Designs</option>
+    <option value="Print Designs">Print Designs</option>
+   </select></label>
+   <label>Price (PKR)<input id="pPrice" type="number" min="0" step="0.01" required></label>
+   <label>Sale Price (optional)<input id="pSale" type="number" min="0" step="0.01"></label>
+  </div>
+  <label>Description<textarea id="pDescription" rows="3"></textarea></label>
+  <label>Product Photos (select multiple)<input id="pImages" type="file" accept="image/*" multiple></label>
+  <label><input id="pPublished" type="checkbox" checked style="width:auto"> Publish product on website</label>
+  <div class="modal-actions">
+   <button class="gold-btn" type="submit">Save Product</button>
+   <button class="dark-btn" type="button" onclick="resetProductForm()">Clear Form</button>
+  </div>
+  <div class="notice" id="productMessage"></div>
+ </form>
+ <h3 class="gold">Manage Products</h3>
+ <div id="adminProducts" class="admin-products"></div>
+ <h3 class="gold">Customer Orders</h3>
+ <div id="adminOrders"></div>
+</section>
 
-Remove all old "AL QURESH KIDS" branding.
+<!-- CUSTOMER AUTH -->
+<div class="modal" id="authModal">
+ <div class="modal-box">
+  <h2>Customer Account</h2>
+  <label>Email</label><input id="authEmail" type="email" placeholder="Your email">
+  <label>Password</label><input id="authPassword" type="password" placeholder="Password">
+  <div class="modal-actions">
+   <button class="gold-btn" onclick="customerSignIn()">Login</button>
+   <button class="dark-btn" onclick="customerSignUp()">Create Account</button>
+   <button class="dark-btn" onclick="closeModal('authModal')">Close</button>
+  </div>
+  <p class="notice" id="authMessage">You can also shop and order as a guest without creating an account.</p>
+ </div>
+</div>
 
-Update:
+<!-- ADMIN LOGIN -->
+<div class="modal" id="adminLoginModal">
+ <div class="modal-box">
+  <h2>♛ Admin Login</h2>
+  <label>Admin Email</label><input id="adminEmailInput" type="email" value="Zubairqureshi03132695224@gmail.com">
+  <label>Password</label><input id="adminPasswordInput" type="password" placeholder="Your Supabase account password">
+  <div class="modal-actions">
+   <button class="gold-btn" onclick="adminSignIn()">Secure Login</button>
+   <button class="dark-btn" onclick="closeModal('adminLoginModal')">Close</button>
+  </div>
+  <p class="notice" id="adminMessage">Only the authorized admin account can open the dashboard.</p>
+ </div>
+</div>
 
-- Header logo
-- Homepage branding
-- Browser title
-- Meta description
-- Footer
-- About section
-- Contact section
-- Product cards
-- Website favicon
-- Social sharing metadata
+<!-- CART -->
+<div class="modal" id="cartModal">
+ <div class="modal-box">
+  <h2>🛒 Your Shopping Cart</h2>
+  <div id="cartItems"></div>
+  <h3 id="cartTotal" class="gold"></h3>
+  <h3>Delivery Details</h3>
+  <label>Full Name</label><input id="customerName" placeholder="Your full name">
+  <label>Phone Number</label><input id="customerPhone" placeholder="03XXXXXXXXX">
+  <label>Delivery Address</label><textarea id="customerAddress" rows="2" placeholder="House, street, city"></textarea>
+  <label>Order Notes (optional)</label><textarea id="orderNotes" rows="2"></textarea>
+  <div class="modal-actions">
+   <button class="gold-btn" onclick="placeOrder()">Place Order</button>
+   <button class="dark-btn" onclick="closeModal('cartModal')">Continue Shopping</button>
+  </div>
+  <p class="notice" id="orderMessage">Guest checkout is available. No account is required.</p>
+ </div>
+</div>
 
-Use premium black, metallic gold and white colors matching the original visiting card.
+<script>
+const SUPABASE_URL = "https://cxdzbrkykpdaibelnehv.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_kjJp3_ZXVNyZBW-uI_7Y9g_CYYkVY0u";
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 
-3. Product Categories
+let products = [];
+let cart = [];
+let currentUser = null;
+let isAdmin = false;
+let activeFilter = "";
 
-Create these three independent categories:
+document.getElementById("year").textContent = new Date().getFullYear();
 
-1. Print Designs
-2. Baba Suit Designs
-3. Baby Suit Designs
+function openModal(id){document.getElementById(id).classList.add("open")}
+function closeModal(id){document.getElementById(id).classList.remove("open")}
+function money(n){return "Rs. "+Number(n||0).toLocaleString("en-PK")}
+function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function imageFor(p){return p.image_urls&&p.image_urls.length?p.image_urls[0]:"https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=80"}
 
-Each category must have:
+async function loadProducts(){
+ const {data,error}=await db.from("products").select("*").eq("is_published",true).order("created_at",{ascending:false});
+ if(error){document.getElementById("productGrid").innerHTML='<div class="empty">Products could not be loaded. Please refresh the page.</div>';return}
+ products=data||[];
+ renderProducts();
+}
 
-- Its own attractive banner and image.
-- Independent product listing.
-- Product image gallery.
-- Product name.
-- Product price in PKR.
-- Optional discount and sale price.
-- Product availability.
-- Search functionality.
-- Individual product detail page.
+function chooseCategory(category){
+ activeFilter=activeFilter===category?"":category;
+ document.getElementById("activeCategory").textContent=activeFilter?"Showing: "+activeFilter:"";
+ renderProducts();
+ document.getElementById("products").scrollIntoView({behavior:"smooth"});
+}
 
-4. Customer Contact & Orders
+function renderProducts(){
+ const term=(document.getElementById("searchInput").value||"").toLowerCase().trim();
+ const list=products.filter(p=>(!activeFilter||p.category===activeFilter)&&(!term||(p.title+" "+p.description+" "+p.category).toLowerCase().includes(term)));
+ const grid=document.getElementById("productGrid");
+ if(!list.length){grid.innerHTML='<div class="empty">No products found in this collection yet. Please check again soon.</div>';return}
+ grid.innerHTML=list.map(p=>`
+ <article class="product">
+  <img src="${safe(imageFor(p))}" alt="${safe(p.title)}" loading="lazy">
+  <div class="product-info">
+   <h3>${safe(p.title)}</h3>
+   <div class="price">${money(p.sale_price||p.price)} ${p.sale_price?'<span class="old-price">'+money(p.price)+'</span>':""}</div>
+   <p>${safe(p.description||p.category)}</p>
+   <button class="gold-btn" onclick="addToCart('${p.id}')">Add to Cart</button>
+  </div>
+ </article>`).join("");
+}
 
-Use this official customer contact number:
-
-03132695224
-
-Connect this same number to:
-
-- WhatsApp contact button.
-- WhatsApp product order button.
-- Customer support.
-- Phone call button.
-- Order enquiry.
-
-Phone action must use a telephone link and WhatsApp action must open a WhatsApp conversation with the correct international-format number: 923132695224.
-
-Official Gmail must be configurable. Do not invent or guess the email address. Keep it empty until the owner supplies the exact address.
-
-5. E-commerce
-
-Build a proper shopping experience:
-
-- Product search.
-- Product details.
-- Shopping cart.
-- Quantity selection.
-- Customer name and phone.
-- Delivery address.
-- Order confirmation.
-- Order management.
-
-Support WhatsApp ordering and prepare the architecture for online payment integration.
-
-6. Secure Owner Admin Panel
-
-Create a separate protected owner login.
-
-Admin must be able to:
-
-- Upload unlimited-by-design product records and multiple product images.
-- Add, edit and delete products.
-- Add and edit product prices.
-- Set discount offers.
-- Manage categories.
-- Publish and unpublish products.
-- Delete uploaded images from storage.
-- Manage customer orders.
-- Update business contact information.
-- Manage the homepage banners and promotional posters.
-
-Never expose admin credentials or secret API keys in public frontend code.
-
-7. Supabase Integration
-
-Use the existing Supabase project and its database.
-
-Implement:
-
-- Secure authentication.
-- Product database.
-- Image storage.
-- Order database.
-- Proper Row Level Security.
-- Public read access only to published products.
-- Admin-only product and storage management.
-
-Do not create fake admin functionality or fake product data.
-
-8. Technical Requirements
-
-- Preserve the existing GitHub Pages deployment.
-- Mobile-first responsive design.
-- Fast loading.
-- Accessible navigation.
-- SEO-friendly page titles and descriptions.
-- Proper image optimization.
-- No broken links or empty buttons.
-- No fake reviews or invented products.
-- Keep customer contact email empty until confirmed.
-
-9. Final Testing
-
-Check the live website on mobile and desktop.
-
-Verify every category, search, product navigation, phone link, WhatsApp link, cart and admin access.
-
-Do not publish or overwrite production files without owner approval.
-
-Provide a clear report of modified files, completed features, remaining configuration and testing results.
+function addToCart(id){
+ const p=products.find(x=>x.id===id);if(!p)return;
+ const found=cart.find(x=>x.id===id);
+ if(found)found.qty++;else cart.push({id:p.id,title:p.title,price:Number(p.sale_price||p.price),qty:1});
+ updateCart();
+ alert("Product added to cart.");
+}
+function updateCart(){
+ document.getElementById("cartCount").textContent=cart.reduce((a,b)=>a+b.qty,0);
+}
+function openCart(){
+ const box=document.getElementById("cartItems");
+ if(!cart
