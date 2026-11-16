@@ -349,7 +349,7 @@ function updateCart(){
 function openCart(){
  const box=document.getElementById("cartItems");
  
-.length){
+if(!cart.length){
   box.innerHTML='<div class="empty">Your cart is empty. Please select a product first.</div>';
   document.getElementById("cartTotal").textContent="";
   openModal("cartModal");
