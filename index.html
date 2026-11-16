@@ -1,573 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#11110f">
-<meta name="description" content="Explore premium garment print designs, baba suits and baby suits at AL QURESH GARMENTS.">
-<title>AL QURESH GARMENTS | Premium Garments</title>
+•AL-QURESH GARMENTS — COMPLETE BRANDING & E-COMMERCE UPGRADE
 
-<style>
-:root{
- --dark:#11110f;
- --gold:#c7a45e;
- --cream:#f6f1e8;
- --white:#fff;
- --muted:#aaa397;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- font-family:Arial,sans-serif;
- background:var(--cream);
- color:var(--dark);
-}
-a{text-decoration:none;color:inherit}
-button,input{font:inherit}
-header{
- background:var(--dark);
- color:white;
- position:sticky;
- top:0;
- z-index:100;
- border-bottom:1px solid #403727;
-}
-.header{
- max-width:1250px;
- margin:auto;
- padding:17px 5%;
- display:flex;
- justify-content:space-between;
- align-items:center;
- gap:20px;
-}
-.logo{
- color:var(--gold);
- font-family:Georgia,serif;
- font-size:24px;
- letter-spacing:2px;
- font-weight:bold;
- white-space:nowrap;
-}
-.logo span{
- display:block;
- color:white;
- font:9px Arial;
- letter-spacing:5px;
- text-align:center;
- margin-top:5px;
-}
-nav{display:flex;align-items:center;gap:25px}
-nav a{
- font-size:11px;
- letter-spacing:1px;
- color:#eee;
-}
-nav a:hover{color:var(--gold)}
-.menu{
- display:none;
- background:none;
- border:1px solid var(--gold);
- color:var(--gold);
- padding:8px 12px;
-}
-.hero{
- min-height:570px;
- background:
- linear-gradient(90deg,rgba(12,12,10,.94),rgba(12,12,10,.35)),
- url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=85') center/cover;
- display:flex;
- align-items:center;
- padding:70px 9%;
- color:white;
-}
-.hero-content{max-width:620px}
-.eyebrow{
- color:var(--gold);
- letter-spacing:4px;
- font-size:11px;
- margin-bottom:23px;
-}
-.hero h1{
- font:normal clamp(43px,7vw,78px)/1.1 Georgia,serif;
- margin-bottom:22px;
-}
-.hero h1 span{color:var(--gold)}
-.hero p{
- max-width:470px;
- color:#e0ddd6;
- line-height:1.9;
- font-size:14px;
-}
-.gold-btn{
- display:inline-block;
- background:var(--gold);
- color:#111;
- padding:16px 26px;
- margin-top:28px;
- border:0;
- font-weight:bold;
- font-size:11px;
- letter-spacing:2px;
- cursor:pointer;
-}
-.section{
- padding:78px 7%;
- max-width:1450px;
- margin:auto;
-}
-.heading{text-align:center;margin-bottom:42px}
-.heading small{
- color:#94733b;
- letter-spacing:3px;
- font-size:10px;
-}
-.heading h2{
- font:normal 39px Georgia,serif;
- margin-top:12px;
-}
-.heading p{
- color:#777;
- font-size:13px;
- margin-top:12px;
- line-height:1.8;
-}
-.search-wrap{
- max-width:650px;
- margin:0 auto 35px;
- display:flex;
- background:white;
- border:1px solid #ded5c5;
- padding:7px;
-}
-.search-wrap input{
- flex:1;
- min-width:0;
- border:0;
- outline:none;
- padding:13px;
- font-size:13px;
- background:transparent;
-}
-.search-wrap button{
- border:0;
- background:var(--dark);
- color:var(--gold);
- padding:0 20px;
- font-size:11px;
- letter-spacing:1px;
-}
-.categories{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:22px;
-}
-.category{
- position:relative;
- height:390px;
- overflow:hidden;
- background:#ddd5c8;
-}
-.category img{
- width:100%;
- height:100%;
- object-fit:cover;
- transition:.6s;
-}
-.category:hover img{transform:scale(1.06)}
-.category:after{
- content:"";
- position:absolute;
- inset:35% 0 0;
- background:linear-gradient(transparent,rgba(0,0,0,.85));
-}
-.category-info{
- position:absolute;
- bottom:27px;
- left:25px;
- right:15px;
- color:white;
- z-index:2;
-}
-.category-info small{
- color:var(--gold);
- letter-spacing:2px;
- font-size:9px;
-}
-.category-info h3{
- font:normal 29px Georgia,serif;
- margin:10px 0;
-}
-.category-info span{
- font-size:10px;
- letter-spacing:2px;
- color:#eee;
-}
-.collection{
- background:#eee8dd;
- max-width:none;
-}
-.collection-inner{
- max-width:1250px;
- margin:auto;
-}
-.product-search-info{
- text-align:center;
- font-size:12px;
- color:#777;
- margin:20px 0;
-}
-.empty-products{
- background:white;
- border:1px solid #e4dccf;
- text-align:center;
- padding:48px 20px;
- max-width:700px;
- margin:auto;
-}
-.empty-products .symbol{
- font-size:36px;
- color:var(--gold);
-}
-.empty-products h3{
- font:normal 25px Georgia,serif;
- margin:15px 0 10px;
-}
-.empty-products p{
- color:#777;
- font-size:12px;
- line-height:1.8;
-}
-.empty-products a{
- display:inline-block;
- margin-top:20px;
- color:#8b6a33;
- font-size:11px;
- letter-spacing:1px;
- border-bottom:1px solid var(--gold);
- padding-bottom:5px;
-}
-.feature-banner{
- background:var(--dark);
- color:white;
- text-align:center;
- padding:80px 7%;
-}
-.feature-banner small{
- color:var(--gold);
- letter-spacing:4px;
- font-size:10px;
-}
-.feature-banner h2{
- font:normal 40px Georgia,serif;
- margin:20px 0 12px;
-}
-.feature-banner p{
- color:#ccc;
- font-size:13px;
- line-height:1.8;
-}
-.about{
- display:grid;
- grid-template-columns:1fr 1fr;
- align-items:center;
- gap:55px;
-}
-.about img{
- width:100%;
- height:390px;
- object-fit:cover;
-}
-.about h2{
- font:normal 40px Georgia,serif;
- margin:17px 0;
-}
-.about p{
- color:#6d6a64;
- font-size:13px;
- line-height:2;
-}
-footer{
- background:var(--dark);
- color:white;
- padding:60px 7% 25px;
-}
-.footer-inner{
- max-width:1200px;
- margin:auto;
-}
-.footer-grid{
- display:grid;
- grid-template-columns:2fr 1fr 1fr;
- gap:40px;
-}
-footer h3{
- color:var(--gold);
- font:normal 23px Georgia,serif;
- margin-bottom:18px;
-}
-footer p,footer a{
- display:block;
- color:#bbb;
- font-size:12px;
- line-height:2.2;
-}
-footer a:hover{color:var(--gold)}
-.copyright{
- text-align:center;
- color:#888;
- font-size:10px;
- border-top:1px solid #39352d;
- margin-top:40px;
- padding-top:22px;
-}
-.hidden{display:none!important}
-@media(max-width:850px){
- nav{
-  display:none;
-  position:absolute;
-  top:68px;
-  left:0;
-  right:0;
-  background:var(--dark);
-  padding:25px 7%;
-  flex-direction:column;
-  align-items:flex-start;
- }
- nav.open{display:flex}
- .menu{display:block}
- .categories{grid-template-columns:1fr 1fr}
- .category{height:320px}
- .about{grid-template-columns:1fr}
-}
-@media(max-width:520px){
- .header{padding:15px 4%}
- .logo{font-size:20px}
- .hero{min-height:490px;padding:50px 7%}
- .section{padding:55px 5%}
- .categories{grid-template-columns:1fr}
- .category{height:370px}
- .heading h2{font-size:32px}
- .footer-grid{grid-template-columns:1fr}
- .feature-banner h2{font-size:32px}
-}
-</style>
-</head>
+Upgrade the existing GitHub website without deleting or damaging existing working features.
 
-<body>
+Official Brand Name: Al-Quresh Garments
 
-<header>
- <div class="header">
-  <a href="#home" class="logo">
-   AL QURESH
-   <span>GARMENTS</span>
-  </a>
+Brand Category: Baby & Baba Kids Wear
 
-  <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+1. Exact Brand Identity
 
-  <nav id="navigation">
-   <a href="#home" onclick="closeMenu()">HOME</a>
-   <a href="#collections" onclick="closeMenu()">COLLECTIONS</a>
-   <a href="#print-designs" onclick="closeMenu()">PRINT DESIGNS</a>
-   <a href="#baba-suits" onclick="closeMenu()">BABA SUITS</a>
-   <a href="#baby-suits" onclick="closeMenu()">BABY SUITS</a>
-   <a href="#about" onclick="closeMenu()">ABOUT</a>
-  </nav>
- </div>
-</header>
+Use the attached original visiting card as the primary branding reference.
 
-<main>
+Recreate the brand identity as closely as possible:
 
-<section class="hero" id="home">
- <div class="hero-content">
-  <div class="eyebrow">THE ART OF PREMIUM FASHION</div>
-  <h1>Style That<br><span>Defines You.</span></h1>
-  <p>
-   Welcome to AL QURESH GARMENTS.
-   Discover beautiful print designs, elegant baba suits
-   and comfortable baby suits in one place.
-  </p>
-  <a href="#collections" class="gold-btn">EXPLORE COLLECTIONS</a>
- </div>
-</section>
+- Black premium rectangular garment hang-tag appearance.
+- Small circular hanging hole at the top.
+- Elegant gold AQ monogram with a crown above it.
+- Gold script typography reading "Al-Quresh".
+- Gold "Garments" lettering underneath.
+- White rectangular label reading "Baby & Baba".
+- White/gold "Kids Wear".
+- Exact tagline: "A Name You Can Trust".
 
-<section class="section" id="collections">
- <div class="heading">
-  <small>EXPLORE OUR CATEGORIES</small>
-  <h2>Our Collections</h2>
-  <p>Discover our latest garment designs and collections.</p>
- </div>
+Do not replace this identity with generic typography or a different logo.
 
- <div class="search-wrap">
-  <input id="categorySearch" type="search"
-   placeholder="Search print designs, baba suits, baby suits..."
-   aria-label="Search collections">
-  <button onclick="searchCategory()">SEARCH</button>
- </div>
+Use the supplied card photograph as a visual reference. Create a clean, high-resolution digital logo suitable for website header, footer, favicon, product branding and mobile screens.
 
- <div class="categories">
-  <a class="category" href="#print-designs" data-search="print prints fabric designs">
-   <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=750&q=85" alt="Garment print designs">
-   <div class="category-info">
-    <small>FABRIC & PATTERNS</small>
-    <h3>Print Designs</h3>
-    <span>EXPLORE DESIGNS →</span>
-   </div>
-  </a>
+Official spelling must remain exactly: Al-Quresh Garments.
 
-  <a class="category" href="#baba-suits" data-search="baba suit boys suits">
-   <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=750&q=85" alt="Children fashion">
-   <div class="category-info">
-    <small>PREMIUM COLLECTION</small>
-    <h3>Baba Suit Designs</h3>
-    <span>EXPLORE DESIGNS →</span>
-   </div>
-  </a>
+2. Website Branding Replacement
 
-  <a class="category" href="#baby-suits" data-search="baby suit infant suits">
-   <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=750&q=85" alt="Baby clothing">
-   <div class="category-info">
-    <small>SOFT & COMFORTABLE</small>
-    <h3>Baby Suit Designs</h3>
-    <span>EXPLORE DESIGNS →</span>
-   </div>
-  </a>
- </div>
- <p id="searchMessage" class="product-search-info hidden"></p>
-</section>
+Remove all old "AL QURESH KIDS" branding.
 
-<section class="section collection" id="print-designs">
- <div class="collection-inner">
-  <div class="heading">
-   <small>FABRIC COLLECTION</small>
-   <h2>Print Designs</h2>
-   <p>Explore our garment print patterns and fabric designs.</p>
-  </div>
-  <div class="empty-products">
-   <div class="symbol">✦</div>
-   <h3>Print Collection</h3>
-   <p>New print designs will be displayed here after they are uploaded and published by the store owner.</p>
-  </div>
- </div>
-</section>
+Update:
 
-<section class="section" id="baba-suits">
- <div class="heading">
-  <small>PREMIUM GARMENTS</small>
-  <h2>Baba Suit Designs</h2>
-  <p>Discover the latest baba suit designs and prices.</p>
- </div>
- <div class="empty-products">
-  <div class="symbol">✦</div>
-  <h3>Baba Suit Collection</h3>
-  <p>New baba suit pictures, product names and prices will appear here when published by the owner.</p>
- </div>
-</section>
+- Header logo
+- Homepage branding
+- Browser title
+- Meta description
+- Footer
+- About section
+- Contact section
+- Product cards
+- Website favicon
+- Social sharing metadata
 
-<section class="section collection" id="baby-suits">
- <div class="collection-inner">
-  <div class="heading">
-   <small>LITTLE FASHION</small>
-   <h2>Baby Suit Designs</h2>
-   <p>Beautiful and comfortable baby suit designs.</p>
-  </div>
-  <div class="empty-products">
-   <div class="symbol">✦</div>
-   <h3>Baby Suit Collection</h3>
-   <p>New baby suit pictures, product names and prices will appear here when published by the owner.</p>
-  </div>
- </div>
-</section>
+Use premium black, metallic gold and white colors matching the original visiting card.
 
-<section class="feature-banner">
- <small>AL QURESH GARMENTS</small>
- <h2>Quality Meets Style</h2>
- <p>Beautiful designs. Thoughtful details. A collection made to stand out.</p>
- <a href="#collections" class="gold-btn">DISCOVER MORE</a>
-</section>
+3. Product Categories
 
-<section class="section about" id="about">
- <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=85" alt="Premium garments collection">
- <div>
-  <small style="color:#94733b;letter-spacing:3px">ABOUT OUR BRAND</small>
-  <h2>AL QURESH GARMENTS</h2>
-  <p>
-   Welcome to AL QURESH GARMENTS, a clothing brand
-   bringing together beautiful print designs and
-   carefully selected garment collections.
-   Explore our categories and discover styles
-   that suit your choice.
-  </p>
-  <a href="#collections" class="gold-btn">EXPLORE COLLECTIONS</a>
- </div>
-</section>
+Create these three independent categories:
 
-</main>
+1. Print Designs
+2. Baba Suit Designs
+3. Baby Suit Designs
 
-<footer>
- <div class="footer-inner">
-  <div class="footer-grid">
-   <div>
-    <h3>AL QURESH GARMENTS</h3>
-    <p>Premium Garments & Fashion.</p>
-    <p>Discover print designs, baba suits and baby suits.</p>
-   </div>
+Each category must have:
 
-   <div>
-    <h3>Collections</h3>
-    <a href="#print-designs">Print Designs</a>
-    <a href="#baba-suits">Baba Suit Designs</a>
-    <a href="#baby-suits">Baby Suit Designs</a>
-   </div>
+- Its own attractive banner and image.
+- Independent product listing.
+- Product image gallery.
+- Product name.
+- Product price in PKR.
+- Optional discount and sale price.
+- Product availability.
+- Search functionality.
+- Individual product detail page.
 
-   <div>
-    <h3>Contact</h3>
-    <p>Email:</p>
-    <p>Phone:</p>
-    <p>WhatsApp:</p>
-   </div>
-  </div>
+4. Customer Contact & Orders
 
-  <div class="copyright">
-   © 2026 AL QURESH GARMENTS. ALL RIGHTS RESERVED.
-  </div>
- </div>
-</footer>
+Use this official customer contact number:
 
-<script>
-function toggleMenu(){
- document.getElementById('navigation').classList.toggle('open');
-}
-function closeMenu(){
- document.getElementById('navigation').classList.remove('open');
-}
-function searchCategory(){
- const input=document.getElementById('categorySearch');
- const query=input.value.trim().toLowerCase();
- const cards=document.querySelectorAll('.category');
- const message=document.getElementById('searchMessage');
- let matches=0;
+03132695224
 
- cards.forEach(card=>{
-  const keywords=card.dataset.search.toLowerCase();
-  const title=card.querySelector('h3').textContent.toLowerCase();
-  const found=!query || keywords.includes(query) || title.includes(query);
-  card.classList.toggle('hidden',!found);
-  if(found) matches++;
- });
+Connect this same number to:
 
- message.classList.remove('hidden');
- message.textContent=query
-  ? (matches ? matches+' matching collection(s) found.' : 'No matching collection found. Try another search.')
-  : 'Showing all collections.';
+- WhatsApp contact button.
+- WhatsApp product order button.
+- Customer support.
+- Phone call button.
+- Order enquiry.
 
- document.getElementById('collections').scrollIntoView({behavior:'smooth'});
-}
-document.getElementById('categorySearch').addEventListener('keydown',e=>{
- if(e.key==='Enter') searchCategory();
-});
-</script>
+Phone action must use a telephone link and WhatsApp action must open a WhatsApp conversation with the correct international-format number: 923132695224.
 
-</body>
-    </html>
-    
+Official Gmail must be configurable. Do not invent or guess the email address. Keep it empty until the owner supplies the exact address.
+
+5. E-commerce
+
+Build a proper shopping experience:
+
+- Product search.
+- Product details.
+- Shopping cart.
+- Quantity selection.
+- Customer name and phone.
+- Delivery address.
+- Order confirmation.
+- Order management.
+
+Support WhatsApp ordering and prepare the architecture for online payment integration.
+
+6. Secure Owner Admin Panel
+
+Create a separate protected owner login.
+
+Admin must be able to:
+
+- Upload unlimited-by-design product records and multiple product images.
+- Add, edit and delete products.
+- Add and edit product prices.
+- Set discount offers.
+- Manage categories.
+- Publish and unpublish products.
+- Delete uploaded images from storage.
+- Manage customer orders.
+- Update business contact information.
+- Manage the homepage banners and promotional posters.
+
+Never expose admin credentials or secret API keys in public frontend code.
+
+7. Supabase Integration
+
+Use the existing Supabase project and its database.
+
+Implement:
+
+- Secure authentication.
+- Product database.
+- Image storage.
+- Order database.
+- Proper Row Level Security.
+- Public read access only to published products.
+- Admin-only product and storage management.
+
+Do not create fake admin functionality or fake product data.
+
+8. Technical Requirements
+
+- Preserve the existing GitHub Pages deployment.
+- Mobile-first responsive design.
+- Fast loading.
+- Accessible navigation.
+- SEO-friendly page titles and descriptions.
+- Proper image optimization.
+- No broken links or empty buttons.
+- No fake reviews or invented products.
+- Keep customer contact email empty until confirmed.
+
+9. Final Testing
+
+Check the live website on mobile and desktop.
+
+Verify every category, search, product navigation, phone link, WhatsApp link, cart and admin access.
+
+Do not publish or overwrite production files without owner approval.
+
+Provide a clear report of modified files, completed features, remaining configuration and testing results.
